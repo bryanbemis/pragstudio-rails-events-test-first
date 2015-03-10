@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe "Viewing the list of events" do
-  it "shows the event" do
+  it "shows the events" do
     visit events_url
 
     expect(page).to have_text("3 Events")
