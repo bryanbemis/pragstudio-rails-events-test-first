@@ -26,5 +26,10 @@ describe "Viewing the list of events" do
     expect(page).to have_text(event1.name)
     expect(page).to have_text(event2.name)
     expect(page).to have_text(event3.name)
+
+    expect(page).to have_text(event1.location)
+    expect(page).to have_text(event1.description[0..10])
+    expect(page).to have_text(event1.starts_at)
+    expect(page).to have_text("$10.00")
   end
 end
