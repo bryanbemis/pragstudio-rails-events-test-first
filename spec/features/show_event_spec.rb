@@ -8,7 +8,7 @@ describe "Viewing an individual event" do
                          description: "Fun evening of bug smashing",
                          starts_at: 10.days.from_now)
 
-    visit "http://example.com/events/#{event.id}"
+    visit event_url(event)
 
     expect(page).to have_text(event.name)
     expect(page).to have_text(event.location)
