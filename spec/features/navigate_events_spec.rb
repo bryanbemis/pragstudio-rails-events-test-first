@@ -2,11 +2,7 @@ require 'rails_helper'
 
 describe "Navigating events" do
   it "allows navigation from the detail page to the listing page" do
-    event = Event.create(name: "BugSmash",
-                         location: "Denver",
-                         price: 10.00,
-                         description: "A fun evening of bug smashing",
-                         starts_at: 10.days.from_now)
+    event = Event.create(event_attributes)
 
     visit event_url(event)
 
@@ -16,11 +12,7 @@ describe "Navigating events" do
   end
 
   it "allows navigation from the listing page to the detail page" do
-    event = Event.create(name: "BugSmash",
-                         location: "Denver",
-                         price: 10.00,
-                         description: "A fun evening of bug smashing",
-                         starts_at: 10.days.from_now)
+    event = Event.create(event_attributes)
 
     visit events_url
 
